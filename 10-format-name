@@ -1,4 +1,3 @@
 public String formatName(String firstName, String lastName) {
     List<String> fullName = new List<String>{lastName, firstName};
-    return fullName.join(', ');
-}
+    return String.join(fullName, ', ');
