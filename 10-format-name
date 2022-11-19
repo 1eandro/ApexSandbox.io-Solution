@@ -1,4 +1,8 @@
 public String formatName(String firstName, String lastName) {
-    List<String> fullName = new List<String>{lastName, firstName};
+
+    List<String> fullName = new List<String>();
+    if(!String.isBlank(lastname)) fullName.add(lastName);
+    if(!String.isBlank(firstName)) fullName.add(firstName);
+
     return String.join(fullName, ', ');
 }
