@@ -1,0 +1,29 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    List<List<String>> entries = new List<List<String>>();
+
+    addToentries('lettuce', 'cucumbers', entries);
+    addToentries('lettuce', 'onions', entries);
+    addToentries('onions', 'carrots', entries);
+    addToentries('onions', 'tomatoes', entries);
+
+    Boolean areCompanion = false;
+    for(List<String> entry: entries){
+        if(containsPair(new List<String>{plant1, plant2}, entry)) areCompanion = true;
+    }
+    return areCompanion;
+}
+
+public void addToEntries(String el1, String el2, List<List<String>> entries){
+    entries.add(new List<String>{el1, el2});
+}
+
+public Boolean containsPair(List<String> pair, List<String> entry){
+    return 
+    (
+        (pair.get(0) == entry.get(0) && pair.get(1) == entry.get(1))
+        ||
+        (pair.get(0) == entry.get(1) && pair.get(1) == entry.get(0))
+    );
+    
+}
+
