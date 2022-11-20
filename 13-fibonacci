@@ -1,4 +1,14 @@
 public Integer fibonacci(Integer n) {
-    if(n ==1 ) return 1;
-    return fibonacci(n)+fibonacci(n-1);
+    if(n == 1 ) return 1;
+    if(n == 2 ) return 1;
+
+    Integer accu = 0;
+    Integer last = 1;
+    Integer secondLast = 1;
+    for(Integer i=3; i<=n; i++){
+        accu = last + secondLast;
+        secondLast = last;
+        last = accu;
+    }
+    return accu;
 }
