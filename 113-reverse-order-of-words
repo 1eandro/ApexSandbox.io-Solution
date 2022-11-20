@@ -2,8 +2,6 @@ public String reverseWordsInASentence(String sentence){
     if(sentence == null) return null;
     List<String> exploded = sentence.split(' ');
     List<string> reversed = new List<String>();
-    for(Integer i=exploded.size()-1; i>=0; i--){
-        reversed.add(exploded.get(i));
-    }
+    for(Integer i=exploded.size()-1; i>=0; i--) reversed.add(exploded.get(i));
     return String.join(reversed,' ');
 }
