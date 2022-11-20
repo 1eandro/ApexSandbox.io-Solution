@@ -1,4 +1,4 @@
 public Integer fibonacci(Integer n) {
     if(n ==1 ) return 1;
-    return fibonacci(n-1);
+    return fibonacci(n)+fibonacci(n-1);
 }
